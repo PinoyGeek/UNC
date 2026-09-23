@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --page: #f6ece8;
+}
+
+@theme inline {
+  --color-blush: var(--page);
+  --color-ink: #3c302d;
+  --color-muted: #8d7c78;
+  --color-line: #efe2de;
+  --color-coral: #f08b83;
+  --color-sage: #6f967a;
+  --color-rose: #c48980;
+  --font-sans: var(--font-dm), "Segoe UI", sans-serif;
+  --font-script: var(--font-great-vibes), "Segoe Script", cursive;
+}
+
+body {
+  background: var(--page);
+  color: #3c302d;
+  font-family: var(--font-dm), "Segoe UI", sans-serif;
+}
+
+input[type="file"] {
+  max-width: 100%;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+input,
+select,
+textarea {
+  accent-color: #6f967a;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-receipt,
+  .print-receipt * {
+    visibility: visible;
+  }
+
+  .print-receipt {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background: white;
+    box-shadow: none;
+  }
+}
